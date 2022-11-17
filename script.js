@@ -37,3 +37,4 @@ function testingwsf() {
 
 
 // ([A-Za-z0-9]\w+(\.?)\w+(\.?)\w+)@(gmail|yahoo|ofppt)\.(com|ma) // gmaillll
+// (05|06|07)([0-9]\d+) // number - but without spaces or + or anything
