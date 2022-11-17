@@ -16,11 +16,24 @@
 if (télephoneReg = /[^a-zA-Z]{10,10}/g) {
   let télephoneReg = document.getElementById("Télephone");
   console.log("Number is valide");
-} else {
-  let output = (document.getElementById("outputtest").innerHTML =
-    "Number is invalideeeeeee");
+}
+else {
+  let output = (document.getElementById("outputtest").innerHTML = "Number is invalideeeeeee");
 }
 
 function testingwsf() {
   console.log("hola test");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// ([A-Za-z0-9]\w+(\.?)\w+(\.?)\w+)@(gmail|yahoo|ofppt)\.(com|ma) // gmaillll
