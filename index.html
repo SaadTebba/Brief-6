@@ -15,7 +15,7 @@
 
         <form action="#">
 
-            <label for="Nom">Nom</label>
+            <label for="Nom" onclick="test()">Nom</label>
             <input type="text" id="Nom" required><br>
             <p id="outputnom"></p>
     
@@ -23,7 +23,7 @@
             <input type="text" id="Prénom" required><br>
             <p id="outputprenom"></p>
     
-            <label for="Email" onclick="emailfunc()">Email</label>
+            <label for="Email">Email</label>
             <input type="text" id="Email" required>
             <p id="outputemail"></p>
     
@@ -39,12 +39,12 @@
             <input type="text" id="Groupe" required><br>
             <p id="outputgroupe"></p>
     
-            <label for="Club(s)">Club(s)</label>
-            <input type="text" id="Club(s)" required><br>
+            <label for="Club">Club(s)</label>
+            <input type="text" id="Club" required><br>
             <p id="outputclubs"></p>
     
             <!-- <input type="submit" id="submit"> -->
-            <button type="submit" id="submit">Submit</button>
+            <button type="submit" id="submit" onclick="submit()">Submit</button>
 
         </form>
 
