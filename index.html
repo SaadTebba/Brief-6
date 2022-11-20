@@ -1,57 +1,67 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>inscription aux clubs parascolaires de Solicode</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <h1>Inscription aux clubs parascolaires de Solicode</h1>
 
     <main>
+        <div id="leftside">
+            <h1>Solicode</h1>
+            <h2>Inscription aux clubs parascolaires</h2>
+        </div>
 
-        <form action="#">
+        <div id="rightside">
+            <form action="#">
+                
+                <label for="Nom" class="labels" data-hover="le nom ne doivent pas dépasser 30 caractères">Nom</label>
+                <input type="text" id="Nom" required class="inputs">
+                <p id="outputnom"></p>
 
-            <label for="Nom" onclick="test()">Nom</label>
-            <input type="text" id="Nom" required><br>
-            <p id="outputnom"></p>
-    
-            <label for="Prénom">Prénom</label>
-            <input type="text" id="Prénom" required><br>
-            <p id="outputprenom"></p>
-    
-            <label for="Email">Email</label>
-            <input type="text" id="Email" required>
-            <p id="outputemail"></p>
-    
-            <label for="Télephone">Télephone</label>
-            <input type="text" id="Télephone" required><br>
-            <p id="outputtelephone"></p>
+                <label for="Prénom" class="labels" data-hover="le prénom ne doivent pas dépasser 30 caractères">Prénom</label>
+                <input type="text" id="Prénom" required class="inputs">
+                <p id="outputprenom"></p>
 
-            <label for="Genre">Genre</label>
-            <input type="text" id="Genre" required><br>
-            <p id="outputgenre"></p>
-    
-            <label for="Groupe">Groupe</label>
-            <input type="text" id="Groupe" required><br>
-            <p id="outputgroupe"></p>
-    
-            <label for="Club">Club(s)</label>
-            <input type="text" id="Club" required><br>
-            <p id="outputclub"></p>
-    
-            <!-- <input type="submit" id="submit"> -->
-            <p id="submit" onclick="submit()">Click me, i'm a button</p>
-            <button type="submit">Submit</button>
+                <label for="Email" class="labels" data-hover="L'email doit être un email valide (prenom.nom@ofppt.ma)">Email</label>
+                <input type="text" id="Email" required class="inputs">
+                <p id="outputemail"></p>
 
-        </form>
+                <label for="Télephone" class="labels" data-hover="Le numéro de téléphone doit avoir exactement 10 chiffres et commencer obligatoirement par 05 ou 06 ou 07 ou +212" >Télephone</label>
+                <input type="text" id="Télephone" required class="inputs">
+                <p id="outputtelephone"></p>
+
+                <label for="Genre" class="labels">Genre</label>
+                <input type="text" id="Genre" required class="inputs">
+                <p id="outputgenre"></p>
+
+                <label for="Groupe" class="labels">Groupe</label>
+                <input type="text" id="Groupe" required class="inputs">
+                <p id="outputgroupe"></p>
+
+                <label for="Club" class="labels">Club(s)</label>
+                <input type="text" id="Club" required class="inputs">
+                <p id="outputclub"></p>
+
+                <!-- <input type="submit" id="submit"> -->
+                <button type="submit" onclick="submit()">Submit</button>
+
+            </form>
+        </div>
 
     </main>
 
-    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,105 @@
-#show {
-    display: none;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* adjusting the card that holds DIV & FORM */
+
+main {
+    width: 70%;
+    height: 80%;
+}
+
+/* LEFT SIDE: div headings - h1/h2 */
+
+#leftside {
+    float: left;
+    width: 50%;
+    height: 100%;
+    color: white;
+    background-image: url("minibackg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3% 0 0 3%;
+    text-align: center;
+}
+
+h1 {
+    margin: 20% 0 25% 0;
+    font-size: 4em;
+    letter-spacing: 0.4cm;
+}
+
+/* RIGHT SIDE: form of contact (all inputs & labels) */
+
+#rightside {
+    float: right;
+    background-color: #4394d6e8;
+    width: 50%;
+    height: 100%;
+    border-radius: 0 3% 3% 0;
+    color: white;
+}
+
+form {
+    /* background-color: red; */
+    height: 100%;
+}
+
+.labels {
+    padding: 10px 0 5px 0;
+}
+
+.inputs {
+    padding-left: 5px;
+    height: 30px;
+    margin-top: 50px;
+}
+
+.inputs, .labels, button {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+
+/* icon test hover */
+
+.labels {
+    position: relative;
+  }
+  
+  .labels:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 400px;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 0.2s ease-in-out;
+  
+    position: absolute;
+    left: 0;
+    top: 110%;
+  }
+  
+  .labels:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+/* box-shadow: 5px 10px 10px 5px rgb(176, 176, 176); */

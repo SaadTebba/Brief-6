@@ -20,77 +20,71 @@ function submit() {
 
   if (nomPrenomValidation.test(nom)) {
     document.getElementById("Nom").style.borderColor = "";
-    document.getElementById("outputnom").innerHTML = nom + " is valid";
+    console.log(nom + " is valid");
   } else {
     document.getElementById("Nom").style.borderColor = "#FF0000";
-    document.getElementById("outputnom").innerHTML = nom + " is not valid";
+    console.log(nom + " is not valid");
   }
 
   // Prénom validation
 
   if (nomPrenomValidation.test(prenom)) {
     document.getElementById("Prénom").style.borderColor = "";
-    document.getElementById("outputprenom").innerHTML = prenom + " is valid";
+    console.log(prenom + " is valid");
   } else {
     document.getElementById("Prénom").style.borderColor = "#FF0000";
-    document.getElementById("outputprenom").innerHTML = prenom + " is not valid";
+    console.log(prenom + " is not valid");
   }
 
   // Email validation
 
   if (emailValidation.test(email)) {
     document.getElementById("Email").style.borderColor = "";
-    document.getElementById("outputemail").innerHTML = email + " is valid";
+    console.log(email + " is valid");
   } else {
     document.getElementById("Email").style.borderColor = "#FF0000";
-    document.getElementById("outputemail").innerHTML = email + " is not valid";
+    console.log(email + " is not valid");
   }
 
   // Phone number validation
 
   if (phoneNumberValidation.test(telephone)) {
     document.getElementById("Télephone").style.borderColor = "";
-    document.getElementById("outputtelephone").innerHTML = telephone + " is valid";
+    console.log(telephone + " is valid");
   } else {
     document.getElementById("Télephone").style.borderColor = "#FF0000";
-    document.getElementById("outputtelephone").innerHTML = telephone + " is not valid";
+    console.log(telephone + " is not valid");
   }
 
   // Genre validation
 
   if (genreValidation.test(genre)) {
     document.getElementById("Genre").style.borderColor = "";
-    document.getElementById("outputgenre").innerHTML = genre + " is valid";
+    console.log(genre + " is valid");
   } else {
     document.getElementById("Genre").style.borderColor = "#FF0000";
-    document.getElementById("outputgenre").innerHTML = genre + " is not valid";
+    console.log(genre + " is not valid");
   }
   
   // Groupe validation
   
   if (groupeValidation.test(groupe)) {
     document.getElementById("Groupe").style.borderColor = "";
-    document.getElementById("outputgroupe").innerHTML = groupe + " is valid";
+    console.log(groupe + " is valid");
   } else {
     document.getElementById("Groupe").style.borderColor = "#FF0000";
-    document.getElementById("outputgroupe").innerHTML = groupe + " is not valid";
+    console.log(groupe + " is not valid");
   }
 
   // Club(s) validation
 
   if (clubValidation.test(club)) {
     document.getElementById("Club").style.borderColor = "";
-    document.getElementById("outputclub").innerHTML = club + " is valid";
+    console.log(club + " is valid");
   } else {
     document.getElementById("Club").style.borderColor = "#FF0000";
-    document.getElementById("outputclub").innerHTML = club + " is not valid";
+    console.log(club + " is not valid");
   }
 
   
 }
-
-
-
-// function test() {
-
-// }
