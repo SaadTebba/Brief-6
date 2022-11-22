@@ -9,7 +9,7 @@ function validation() {
   let emailValidation = /^([A-Za-z0-9]\w+(\.?)\w+(\.?)\w+)@(gmail|yahoo|ofppt)\.(com|ma)$/;
   let phoneNumberValidation = /^(05|06|07)([0-9]{8})$|^(\+212)-?([0-9]{9})$/;
   let clubValidation = document.getElementById('club').selectedOptions;
-  let red = [];
+  let arr = [];
 
   // Nom validation
 
@@ -19,7 +19,7 @@ function validation() {
   } else {
     document.getElementById("Nom").style.borderColor = "#FF0000";
     document.getElementById("nomerror").style.visibility= "visible";
-    red.push(false)
+    arr.push(1)
   }
 
   // Prénom validation
@@ -30,7 +30,7 @@ function validation() {
   } else {
     document.getElementById("Prénom").style.borderColor = "#FF0000";
     document.getElementById("prenomerror").style.visibility= "visible";
-    red.push(false)
+    arr.push(2)
   }
 
   // Email validation
@@ -41,7 +41,7 @@ function validation() {
   } else {
     document.getElementById("Email").style.borderColor = "#FF0000";
     document.getElementById("emailerror").style.visibility= "visible";
-    red.push(false)
+    arr.push(3)
   }
 
   // Phone number validation
@@ -52,36 +52,24 @@ function validation() {
   } else {
     document.getElementById("Télephone").style.borderColor = "#FF0000";
     document.getElementById("teleerror").style.visibility= "visible";
-    red.push(false)
+    arr.push(4)
   }
 
   // Club(s) validation
 
   if (clubValidation.length === 0) {
-    document.getElementById("cluberror3").style.visibility= "hidden";
     document.getElementById("cluberror0").style.visibility= "visible";
-    red.push(false)
+    arr.push(5)
   } else if (clubValidation.length > 3) {
-    document.getElementById("cluberror3").style.visibility= "visible";
-    document.getElementById("cluberror0").style.visibility= "hidden";
-    red.push(false)
+    document.getElementById("cluberror0").style.visibility= "visible";
+    document.getElementById("cluberror0").innerHTML= "Le nombre maximum de groupes à sélectionner est de 3";
+    arr.push(6)
   } else {
-    document.getElementById("cluberror3").style.visibility= "hidden";
     document.getElementById("cluberror0").style.visibility= "hidden";
   }
 
+  if (arr.length === 0) {
+    document.getElementById("form").submit();
+    }
   
 }
-
-function redirect(){
-window.location.href="confirmation.html";
-}
-formid.submit();
-
-// if (red.length === 0) {
-//   document.getElementById('formid').submit();
-// } else {
-
-// }
-
-// console.log(red);

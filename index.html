@@ -25,27 +25,27 @@
         </div>
 
         <div id="rightside">
-            <form  id="formid" action="/confirmation.html" target="_blank">
+            <form  id="form" action="/confirmation.html">
 
                 <label for="Nom" class="labels">Nom</label>
                 <input type="text" id="Nom" class="inputs nom"
-                    placeholder="le nom ne doivent pas depasser 30 caracteres">
+                    placeholder="Example: Saad">
                 <i class="fas fa-exclamation-circle" id="nomerror">Quelque chose s'est mal passe</i>
 
                 <label for="Prénom" class="labels">Prénom</label>
                 <input type="text" id="Prénom" class="inputs prenom"
-                    placeholder="le prénom ne doivent pas depasser 30 caracteres">
+                    placeholder="Example: Tebbaa">
                 <i class="fas fa-exclamation-circle" id="prenomerror">Quelque chose s'est mal passe</i>
                 <p id="testing"></p>
 
                 <label for="Email" class="labels">Email</label>
                 <input type="text" id="Email" class="inputs"
-                    placeholder="L'email doit etre un email valide (prenom.nom@gmail.com)">
+                    placeholder="Example: Saad.tebba.solicode@ofppt.ma">
                 <i class="fas fa-exclamation-circle" id="emailerror">Quelque chose s'est mal passe</i>
 
                 <label for="Télephone" class="labels">Télephone</label>
                 <input type="text" id="Télephone" class="inputs"
-                    placeholder="Il doit avoir 10 chiffres et commencer par 05 ou 06 ou 07 ou +212">
+                    placeholder="Example: +212-600110011">
                 <i class="fas fa-exclamation-circle" id="teleerror">Quelque chose s'est mal passe</i>
 
                 <fieldset>
@@ -89,10 +89,8 @@
                 </select>
 
                 <i class="fas fa-exclamation-circle" id="cluberror0">Vous devez selectionner au moins un groupe</i>
-                <i class="fas fa-exclamation-circle" id="cluberror3">Le nombre maximum de groupes à sélectionner est de
-                    3</i>
 
-                <button type="submit" id="submit" onclick="validation()" onclick="redirect()">Submit</button>
+                <button type="button" class="submit" onclick="validation()">Submit</button>
 
             </form>
         </div>
