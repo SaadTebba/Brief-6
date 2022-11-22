@@ -10,9 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/165265fe22.js" crossorigin="anonymous"></script>
     <title>inscription aux clubs parascolaires de Solicode</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -24,38 +25,74 @@
         </div>
 
         <div id="rightside">
-            <form action="#">
-                
-                <label for="Nom" class="labels" data-hover="le nom ne doivent pas dépasser 30 caractères">Nom</label>
-                <input type="text" id="Nom" required class="inputs">
-                <p id="outputnom"></p>
+            <form  id="formid" action="/confirmation.html">
 
-                <label for="Prénom" class="labels" data-hover="le prénom ne doivent pas dépasser 30 caractères">Prénom</label>
-                <input type="text" id="Prénom" required class="inputs">
-                <p id="outputprenom"></p>
+                <label for="Nom" class="labels">Nom</label>
+                <input type="text" id="Nom" class="inputs nom"
+                    placeholder="le nom ne doivent pas depasser 30 caracteres">
+                <i class="fas fa-exclamation-circle" id="nomerror">Quelque chose s'est mal passe</i>
 
-                <label for="Email" class="labels" data-hover="L'email doit être un email valide (prenom.nom@ofppt.ma)">Email</label>
-                <input type="text" id="Email" required class="inputs">
-                <p id="outputemail"></p>
+                <label for="Prénom" class="labels">Prénom</label>
+                <input type="text" id="Prénom" class="inputs prenom"
+                    placeholder="le prénom ne doivent pas depasser 30 caracteres">
+                <i class="fas fa-exclamation-circle" id="prenomerror">Quelque chose s'est mal passe</i>
+                <p id="testing"></p>
 
-                <label for="Télephone" class="labels" data-hover="Le numéro de téléphone doit avoir exactement 10 chiffres et commencer obligatoirement par 05 ou 06 ou 07 ou +212" >Télephone</label>
-                <input type="text" id="Télephone" required class="inputs">
-                <p id="outputtelephone"></p>
+                <label for="Email" class="labels">Email</label>
+                <input type="text" id="Email" class="inputs"
+                    placeholder="L'email doit etre un email valide (prenom.nom@gmail.com)">
+                <i class="fas fa-exclamation-circle" id="emailerror">Quelque chose s'est mal passe</i>
 
-                <label for="Genre" class="labels">Genre</label>
-                <input type="text" id="Genre" required class="inputs">
-                <p id="outputgenre"></p>
+                <label for="Télephone" class="labels">Télephone</label>
+                <input type="text" id="Télephone" class="inputs"
+                    placeholder="Il doit avoir 10 chiffres et commencer par 05 ou 06 ou 07 ou +212">
+                <i class="fas fa-exclamation-circle" id="teleerror">Quelque chose s'est mal passe</i>
 
-                <label for="Groupe" class="labels">Groupe</label>
-                <input type="text" id="Groupe" required class="inputs">
-                <p id="outputgroupe"></p>
+                <fieldset>
+                    <legend>Genre:</legend>
 
-                <label for="Club" class="labels">Club(s)</label>
-                <input type="text" id="Club" required class="inputs">
-                <p id="outputclub"></p>
+                    <input type="radio" id="feminin" name="genre" value="feminin" checked>
+                    <label for="feminin">Féminin</label>
 
-                <!-- <input type="submit" id="submit"> -->
-                <button type="submit" onclick="submit()">Submit</button>
+                    <input type="radio" id="masculin" name="genre" value="masculin">
+                    <label for="masculin">Masculin</label>
+
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Groupe:</legend>
+
+                    <input type="radio" id="DW101" name="groupe" value="DW101" checked>
+                    <label for="DW101">DW101</label>
+
+                    <input type="radio" id="DW102" name="groupe" value="DW102">
+                    <label for="DW102">DW102</label>
+
+                    <input type="radio" id="DW103" name="groupe" value="DW103">
+                    <label for="DW103">DW103</label>
+
+                    <input type="radio" id="DM101" name="groupe" value="DM101">
+                    <label for="DM101">DM101</label>
+
+                    <input type="radio" id="DM102" name="groupe" value="DM102">
+                    <label for="DM102">DM102</label>
+
+                </fieldset><br>
+
+                <select name="Club(s)" id="club" multiple>
+                    <option value="1">Informatique</option>
+                    <option value="2">Robotique</option>
+                    <option value="3">Jeu d'echecs</option>
+                    <option value="4" class="right">Musique</option>
+                    <option value="5" class="right">Foot</option>
+                    <option value="6" class="right">Theatre</option>
+                </select>
+
+                <i class="fas fa-exclamation-circle" id="cluberror0">Vous devez selectionner au moins un groupe</i>
+                <i class="fas fa-exclamation-circle" id="cluberror3">Le nombre maximum de groupes à sélectionner est de
+                    3</i>
+
+                <input type="submit" id="submit" value="Submit" onclick="validation()">
 
             </form>
         </div>
