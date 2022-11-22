@@ -93,6 +93,7 @@ legend {
     border: none;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
 #submit:hover {
     background-color: rgb(0, 0, 227);
@@ -101,9 +102,30 @@ legend {
   /* icon */
 
 .fas {
-    color: rgb(162, 13, 13);
+    color: rgb(177, 7, 7);
     font-size: 10px;
     margin-top: 5px;
     letter-spacing: 2px;
     visibility: hidden;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 0.6em;
+    }
+    .labels {
+        padding: 3px 0;
+        font-size: 0.2em,
+    }
+    .inputs {
+        padding-left: 5px;
+        height: 30px;
+        border: 1px solid grey;
+        border-radius: 3px;
+    }
 }
